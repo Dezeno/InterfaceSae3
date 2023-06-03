@@ -1,6 +1,6 @@
 ﻿namespace Interface
 {
-    partial class Interface
+    partial class FormInterface
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInterface));
             btnAide = new Button();
             picIUT = new PictureBox();
             lblNoms = new Label();
@@ -70,6 +70,7 @@
             lblIPV4 = new Label();
             btnValider = new Button();
             grpCalcul = new GroupBox();
+            lblRFC = new Label();
             txtNbMachines = new TextBox();
             label15 = new Label();
             txtNbIP = new TextBox();
@@ -117,6 +118,7 @@
             btnAide.TabIndex = 0;
             btnAide.Text = "?";
             btnAide.UseVisualStyleBackColor = false;
+            btnAide.Click += btnAide_Click;
             // 
             // picIUT
             // 
@@ -214,35 +216,47 @@
             // 
             // txtMasque4
             // 
+            txtMasque4.Enabled = false;
             txtMasque4.Location = new Point(483, 225);
+            txtMasque4.MaxLength = 3;
             txtMasque4.Name = "txtMasque4";
             txtMasque4.Size = new Size(90, 27);
             txtMasque4.TabIndex = 33;
             txtMasque4.TextAlign = HorizontalAlignment.Center;
+            txtMasque4.KeyPress += txtDec_KeyPress;
             // 
             // txtMasque3
             // 
+            txtMasque3.Enabled = false;
             txtMasque3.Location = new Point(368, 225);
+            txtMasque3.MaxLength = 3;
             txtMasque3.Name = "txtMasque3";
             txtMasque3.Size = new Size(91, 27);
             txtMasque3.TabIndex = 32;
             txtMasque3.TextAlign = HorizontalAlignment.Center;
+            txtMasque3.KeyPress += txtDec_KeyPress;
             // 
             // txtMasque2
             // 
+            txtMasque2.Enabled = false;
             txtMasque2.Location = new Point(256, 225);
+            txtMasque2.MaxLength = 3;
             txtMasque2.Name = "txtMasque2";
             txtMasque2.Size = new Size(89, 27);
             txtMasque2.TabIndex = 31;
             txtMasque2.TextAlign = HorizontalAlignment.Center;
+            txtMasque2.KeyPress += txtDec_KeyPress;
             // 
             // txtMasque1
             // 
+            txtMasque1.Enabled = false;
             txtMasque1.Location = new Point(144, 224);
+            txtMasque1.MaxLength = 3;
             txtMasque1.Name = "txtMasque1";
             txtMasque1.Size = new Size(87, 27);
             txtMasque1.TabIndex = 30;
             txtMasque1.TextAlign = HorizontalAlignment.Center;
+            txtMasque1.KeyPress += txtDec_KeyPress;
             // 
             // label10
             // 
@@ -257,10 +271,13 @@
             // txtCIDR
             // 
             txtCIDR.Location = new Point(38, 224);
+            txtCIDR.MaxLength = 2;
             txtCIDR.Name = "txtCIDR";
             txtCIDR.Size = new Size(50, 27);
             txtCIDR.TabIndex = 28;
             txtCIDR.TextAlign = HorizontalAlignment.Center;
+            txtCIDR.KeyPress += txtDec_KeyPress;
+            txtCIDR.Leave += txtCIDR_Leave;
             // 
             // lblSlash
             // 
@@ -314,34 +331,46 @@
             // txtHexa4
             // 
             txtHexa4.Location = new Point(500, 131);
+            txtHexa4.MaxLength = 2;
             txtHexa4.Name = "txtHexa4";
             txtHexa4.Size = new Size(73, 27);
             txtHexa4.TabIndex = 22;
             txtHexa4.TextAlign = HorizontalAlignment.Center;
+            txtHexa4.KeyPress += txtHexa_KeyPress;
+            txtHexa4.Leave += txtHexa_Leave;
             // 
             // txtHexa3
             // 
             txtHexa3.Location = new Point(408, 131);
+            txtHexa3.MaxLength = 2;
             txtHexa3.Name = "txtHexa3";
             txtHexa3.Size = new Size(73, 27);
             txtHexa3.TabIndex = 21;
             txtHexa3.TextAlign = HorizontalAlignment.Center;
+            txtHexa3.KeyPress += txtHexa_KeyPress;
+            txtHexa3.Leave += txtHexa_Leave;
             // 
             // txtHexa2
             // 
             txtHexa2.Location = new Point(312, 131);
+            txtHexa2.MaxLength = 2;
             txtHexa2.Name = "txtHexa2";
             txtHexa2.Size = new Size(73, 27);
             txtHexa2.TabIndex = 20;
             txtHexa2.TextAlign = HorizontalAlignment.Center;
+            txtHexa2.KeyPress += txtHexa_KeyPress;
+            txtHexa2.Leave += txtHexa_Leave;
             // 
             // txtHexa1
             // 
             txtHexa1.Location = new Point(215, 131);
+            txtHexa1.MaxLength = 2;
             txtHexa1.Name = "txtHexa1";
             txtHexa1.Size = new Size(73, 27);
             txtHexa1.TabIndex = 19;
             txtHexa1.TextAlign = HorizontalAlignment.Center;
+            txtHexa1.KeyPress += txtHexa_KeyPress;
+            txtHexa1.Leave += txtHexa_Leave;
             // 
             // lblPt6
             // 
@@ -376,34 +405,46 @@
             // txtBin4
             // 
             txtBin4.Location = new Point(466, 94);
+            txtBin4.MaxLength = 8;
             txtBin4.Name = "txtBin4";
             txtBin4.Size = new Size(107, 27);
             txtBin4.TabIndex = 15;
             txtBin4.TextAlign = HorizontalAlignment.Center;
+            txtBin4.KeyPress += txtBin_KeyPress;
+            txtBin4.Leave += txtBin_Leave;
             // 
             // txtBin3
             // 
             txtBin3.Location = new Point(342, 94);
+            txtBin3.MaxLength = 8;
             txtBin3.Name = "txtBin3";
             txtBin3.Size = new Size(107, 27);
             txtBin3.TabIndex = 14;
             txtBin3.TextAlign = HorizontalAlignment.Center;
+            txtBin3.KeyPress += txtBin_KeyPress;
+            txtBin3.Leave += txtBin_Leave;
             // 
             // txtBin2
             // 
             txtBin2.Location = new Point(215, 94);
+            txtBin2.MaxLength = 8;
             txtBin2.Name = "txtBin2";
             txtBin2.Size = new Size(107, 27);
             txtBin2.TabIndex = 13;
             txtBin2.TextAlign = HorizontalAlignment.Center;
+            txtBin2.KeyPress += txtBin_KeyPress;
+            txtBin2.Leave += txtBin_Leave;
             // 
             // txtBin1
             // 
             txtBin1.Location = new Point(93, 94);
+            txtBin1.MaxLength = 8;
             txtBin1.Name = "txtBin1";
             txtBin1.Size = new Size(107, 27);
             txtBin1.TabIndex = 12;
             txtBin1.TextAlign = HorizontalAlignment.Center;
+            txtBin1.KeyPress += txtBin_KeyPress;
+            txtBin1.Leave += txtBin_Leave;
             // 
             // lblPt3
             // 
@@ -438,34 +479,46 @@
             // txtDec4
             // 
             txtDec4.Location = new Point(466, 52);
+            txtDec4.MaxLength = 3;
             txtDec4.Name = "txtDec4";
             txtDec4.Size = new Size(107, 27);
             txtDec4.TabIndex = 7;
             txtDec4.TextAlign = HorizontalAlignment.Center;
+            txtDec4.KeyPress += txtDec_KeyPress;
+            txtDec4.Leave += txtDec_Leave;
             // 
             // txtDec3
             // 
             txtDec3.Location = new Point(342, 52);
+            txtDec3.MaxLength = 3;
             txtDec3.Name = "txtDec3";
             txtDec3.Size = new Size(107, 27);
             txtDec3.TabIndex = 6;
             txtDec3.TextAlign = HorizontalAlignment.Center;
+            txtDec3.KeyPress += txtDec_KeyPress;
+            txtDec3.Leave += txtDec_Leave;
             // 
             // txtDec2
             // 
             txtDec2.Location = new Point(215, 52);
+            txtDec2.MaxLength = 3;
             txtDec2.Name = "txtDec2";
             txtDec2.Size = new Size(107, 27);
             txtDec2.TabIndex = 5;
             txtDec2.TextAlign = HorizontalAlignment.Center;
+            txtDec2.KeyPress += txtDec_KeyPress;
+            txtDec2.Leave += txtDec_Leave;
             // 
             // txtDec1
             // 
             txtDec1.Location = new Point(93, 52);
+            txtDec1.MaxLength = 3;
             txtDec1.Name = "txtDec1";
             txtDec1.Size = new Size(107, 27);
             txtDec1.TabIndex = 4;
             txtDec1.TextAlign = HorizontalAlignment.Center;
+            txtDec1.KeyPress += txtDec_KeyPress;
+            txtDec1.Leave += txtDec_Leave;
             // 
             // lblMasque
             // 
@@ -496,16 +549,17 @@
             // 
             // btnValider
             // 
-            btnValider.Enabled = false;
             btnValider.Location = new Point(251, 264);
             btnValider.Name = "btnValider";
             btnValider.Size = new Size(94, 29);
             btnValider.TabIndex = 0;
             btnValider.Text = "Valider";
             btnValider.UseVisualStyleBackColor = true;
+            btnValider.Click += btnValider_Click;
             // 
             // grpCalcul
             // 
+            grpCalcul.Controls.Add(lblRFC);
             grpCalcul.Controls.Add(txtNbMachines);
             grpCalcul.Controls.Add(label15);
             grpCalcul.Controls.Add(txtNbIP);
@@ -545,6 +599,15 @@
             grpCalcul.TabIndex = 4;
             grpCalcul.TabStop = false;
             grpCalcul.Text = "Calcul";
+            // 
+            // lblRFC
+            // 
+            lblRFC.AutoSize = true;
+            lblRFC.ForeColor = Color.Red;
+            lblRFC.Location = new Point(174, 39);
+            lblRFC.Name = "lblRFC";
+            lblRFC.Size = new Size(0, 20);
+            lblRFC.TabIndex = 68;
             // 
             // txtNbMachines
             // 
@@ -855,7 +918,7 @@
             txtNet3.TabIndex = 39;
             txtNet3.TextAlign = HorizontalAlignment.Center;
             // 
-            // Interface
+            // FormInterface
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -866,8 +929,9 @@
             Controls.Add(lblNoms);
             Controls.Add(picIUT);
             Controls.Add(btnAide);
-            Name = "Interface";
+            Name = "FormInterface";
             Text = "IP App";
+            Load += FormInterface_Load;
             ((System.ComponentModel.ISupportInitialize)picIUT).EndInit();
             grpSaisie.ResumeLayout(false);
             grpSaisie.PerformLayout();
@@ -953,5 +1017,6 @@
         private TextBox txtNet4;
         private TextBox txtNet2;
         private TextBox txtNet3;
+        private Label lblRFC;
     }
 }

@@ -1,8 +1,8 @@
 namespace Interface
 {
-    public partial class Interface : Form
+    public partial class FormAide : Form
     {
-        public Interface()
+        public FormAide()
         {
             InitializeComponent();
         }

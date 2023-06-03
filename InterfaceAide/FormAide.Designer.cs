@@ -1,6 +1,6 @@
 ﻿namespace InterfaceAide
 {
-    partial class InterfaceAide
+    partial class FormAide
     {
         /// <summary>
         ///  Required designer variable.
