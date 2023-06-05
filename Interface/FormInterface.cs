@@ -139,13 +139,23 @@ namespace Interface
             {
                 if (Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255)
                 {
-                    quitDialog = MessageBox.Show("L' adresse IP est incorrecte !", "Attention !", MessageBoxButtons.OK);
+                    txtDec1.BackColor = Color.LightSalmon;
+                    txtDec2.BackColor = Color.LightSalmon;
+                    txtDec3.BackColor = Color.LightSalmon;
+                    txtDec4.BackColor = Color.LightSalmon;
+                    quitDialog = MessageBox.Show("L'adresse IP est incorrecte !", "Attention !", MessageBoxButtons.OK);
+                    txtDec1.BackColor = Color.LightSteelBlue;
+                    txtDec2.BackColor = Color.LightSteelBlue;
+                    txtDec3.BackColor = Color.LightSteelBlue;
+                    txtDec4.BackColor = Color.LightSteelBlue;
                 }
                 else
                 {
                     if (Convert.ToInt32(txtCIDR.Text) > 31)
                     {
+                        txtCIDR.BackColor = Color.LightSalmon;
                         quitDialog = MessageBox.Show("Le masque est incorrect !", "Attention !", MessageBoxButtons.OK);
+                        txtCIDR.BackColor = Color.LightSteelBlue;
                     }
                     else
                     {

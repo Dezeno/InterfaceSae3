@@ -216,6 +216,8 @@
             // 
             // txtMasque4
             // 
+            txtMasque4.BackColor = Color.LightSteelBlue;
+            txtMasque4.BorderStyle = BorderStyle.FixedSingle;
             txtMasque4.Enabled = false;
             txtMasque4.Location = new Point(483, 225);
             txtMasque4.MaxLength = 3;
@@ -227,6 +229,8 @@
             // 
             // txtMasque3
             // 
+            txtMasque3.BackColor = Color.LightSteelBlue;
+            txtMasque3.BorderStyle = BorderStyle.FixedSingle;
             txtMasque3.Enabled = false;
             txtMasque3.Location = new Point(368, 225);
             txtMasque3.MaxLength = 3;
@@ -238,6 +242,8 @@
             // 
             // txtMasque2
             // 
+            txtMasque2.BackColor = Color.LightSteelBlue;
+            txtMasque2.BorderStyle = BorderStyle.FixedSingle;
             txtMasque2.Enabled = false;
             txtMasque2.Location = new Point(256, 225);
             txtMasque2.MaxLength = 3;
@@ -249,6 +255,8 @@
             // 
             // txtMasque1
             // 
+            txtMasque1.BackColor = Color.LightSteelBlue;
+            txtMasque1.BorderStyle = BorderStyle.FixedSingle;
             txtMasque1.Enabled = false;
             txtMasque1.Location = new Point(144, 224);
             txtMasque1.MaxLength = 3;
@@ -270,6 +278,8 @@
             // 
             // txtCIDR
             // 
+            txtCIDR.BackColor = Color.LightSteelBlue;
+            txtCIDR.BorderStyle = BorderStyle.FixedSingle;
             txtCIDR.Location = new Point(38, 224);
             txtCIDR.MaxLength = 2;
             txtCIDR.Name = "txtCIDR";
@@ -330,6 +340,8 @@
             // 
             // txtHexa4
             // 
+            txtHexa4.BackColor = Color.LightSteelBlue;
+            txtHexa4.BorderStyle = BorderStyle.FixedSingle;
             txtHexa4.Location = new Point(500, 131);
             txtHexa4.MaxLength = 2;
             txtHexa4.Name = "txtHexa4";
@@ -341,6 +353,8 @@
             // 
             // txtHexa3
             // 
+            txtHexa3.BackColor = Color.LightSteelBlue;
+            txtHexa3.BorderStyle = BorderStyle.FixedSingle;
             txtHexa3.Location = new Point(408, 131);
             txtHexa3.MaxLength = 2;
             txtHexa3.Name = "txtHexa3";
@@ -352,6 +366,8 @@
             // 
             // txtHexa2
             // 
+            txtHexa2.BackColor = Color.LightSteelBlue;
+            txtHexa2.BorderStyle = BorderStyle.FixedSingle;
             txtHexa2.Location = new Point(312, 131);
             txtHexa2.MaxLength = 2;
             txtHexa2.Name = "txtHexa2";
@@ -363,6 +379,8 @@
             // 
             // txtHexa1
             // 
+            txtHexa1.BackColor = Color.LightSteelBlue;
+            txtHexa1.BorderStyle = BorderStyle.FixedSingle;
             txtHexa1.Location = new Point(215, 131);
             txtHexa1.MaxLength = 2;
             txtHexa1.Name = "txtHexa1";
@@ -396,7 +414,7 @@
             // 
             lblPt4.AutoSize = true;
             lblPt4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPt4.Location = new Point(201, 95);
+            lblPt4.Location = new Point(199, 95);
             lblPt4.Name = "lblPt4";
             lblPt4.Size = new Size(16, 28);
             lblPt4.TabIndex = 16;
@@ -404,7 +422,9 @@
             // 
             // txtBin4
             // 
-            txtBin4.Location = new Point(466, 94);
+            txtBin4.BackColor = Color.LightSteelBlue;
+            txtBin4.BorderStyle = BorderStyle.FixedSingle;
+            txtBin4.Location = new Point(467, 94);
             txtBin4.MaxLength = 8;
             txtBin4.Name = "txtBin4";
             txtBin4.Size = new Size(107, 27);
@@ -415,6 +435,8 @@
             // 
             // txtBin3
             // 
+            txtBin3.BackColor = Color.LightSteelBlue;
+            txtBin3.BorderStyle = BorderStyle.FixedSingle;
             txtBin3.Location = new Point(342, 94);
             txtBin3.MaxLength = 8;
             txtBin3.Name = "txtBin3";
@@ -426,6 +448,8 @@
             // 
             // txtBin2
             // 
+            txtBin2.BackColor = Color.LightSteelBlue;
+            txtBin2.BorderStyle = BorderStyle.FixedSingle;
             txtBin2.Location = new Point(215, 94);
             txtBin2.MaxLength = 8;
             txtBin2.Name = "txtBin2";
@@ -437,7 +461,9 @@
             // 
             // txtBin1
             // 
-            txtBin1.Location = new Point(93, 94);
+            txtBin1.BackColor = Color.LightSteelBlue;
+            txtBin1.BorderStyle = BorderStyle.FixedSingle;
+            txtBin1.Location = new Point(92, 94);
             txtBin1.MaxLength = 8;
             txtBin1.Name = "txtBin1";
             txtBin1.Size = new Size(107, 27);
@@ -470,7 +496,7 @@
             // 
             lblPt1.AutoSize = true;
             lblPt1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPt1.Location = new Point(201, 53);
+            lblPt1.Location = new Point(199, 53);
             lblPt1.Name = "lblPt1";
             lblPt1.Size = new Size(16, 28);
             lblPt1.TabIndex = 8;
@@ -478,7 +504,9 @@
             // 
             // txtDec4
             // 
-            txtDec4.Location = new Point(466, 52);
+            txtDec4.BackColor = Color.LightSteelBlue;
+            txtDec4.BorderStyle = BorderStyle.FixedSingle;
+            txtDec4.Location = new Point(467, 52);
             txtDec4.MaxLength = 3;
             txtDec4.Name = "txtDec4";
             txtDec4.Size = new Size(107, 27);
@@ -489,6 +517,8 @@
             // 
             // txtDec3
             // 
+            txtDec3.BackColor = Color.LightSteelBlue;
+            txtDec3.BorderStyle = BorderStyle.FixedSingle;
             txtDec3.Location = new Point(342, 52);
             txtDec3.MaxLength = 3;
             txtDec3.Name = "txtDec3";
@@ -500,6 +530,8 @@
             // 
             // txtDec2
             // 
+            txtDec2.BackColor = Color.LightSteelBlue;
+            txtDec2.BorderStyle = BorderStyle.FixedSingle;
             txtDec2.Location = new Point(215, 52);
             txtDec2.MaxLength = 3;
             txtDec2.Name = "txtDec2";
@@ -511,7 +543,9 @@
             // 
             // txtDec1
             // 
-            txtDec1.Location = new Point(93, 52);
+            txtDec1.BackColor = Color.LightSteelBlue;
+            txtDec1.BorderStyle = BorderStyle.FixedSingle;
+            txtDec1.Location = new Point(92, 52);
             txtDec1.MaxLength = 3;
             txtDec1.Name = "txtDec1";
             txtDec1.Size = new Size(107, 27);
@@ -523,7 +557,7 @@
             // lblMasque
             // 
             lblMasque.AutoSize = true;
-            lblMasque.Location = new Point(263, 176);
+            lblMasque.Location = new Point(263, 182);
             lblMasque.Name = "lblMasque";
             lblMasque.Size = new Size(69, 20);
             lblMasque.TabIndex = 3;
@@ -549,12 +583,14 @@
             // 
             // btnValider
             // 
-            btnValider.Location = new Point(251, 264);
+            btnValider.BackColor = Color.PaleGreen;
+            btnValider.FlatStyle = FlatStyle.Flat;
+            btnValider.Location = new Point(256, 264);
             btnValider.Name = "btnValider";
-            btnValider.Size = new Size(94, 29);
+            btnValider.Size = new Size(89, 29);
             btnValider.TabIndex = 0;
             btnValider.Text = "Valider";
-            btnValider.UseVisualStyleBackColor = true;
+            btnValider.UseVisualStyleBackColor = false;
             btnValider.Click += btnValider_Click;
             // 
             // grpCalcul
