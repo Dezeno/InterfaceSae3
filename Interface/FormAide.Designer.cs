@@ -35,6 +35,7 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
             // label1
@@ -103,12 +104,25 @@
             label7.TabIndex = 6;
             label7.Text = "Cette application prend en compte la RFC 5735.";
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.LinkColor = Color.Green;
+            linkLabel1.Location = new Point(61, 438);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(287, 20);
+            linkLabel1.TabIndex = 7;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Plus d'informations sur le VLSM et le FLSM";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // FormAide
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
-            ClientSize = new Size(419, 442);
+            ClientSize = new Size(419, 467);
+            Controls.Add(linkLabel1);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -133,5 +147,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private LinkLabel linkLabel1;
     }
 }
