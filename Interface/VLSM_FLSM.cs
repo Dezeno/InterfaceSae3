@@ -15,6 +15,7 @@ namespace Interface
         public VLSM_FLSM()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
         private void label2_Click(object sender, EventArgs e)

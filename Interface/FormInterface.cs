@@ -9,6 +9,7 @@ namespace Interface
         public FormInterface()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void FormInterface_Load(object sender, EventArgs e)

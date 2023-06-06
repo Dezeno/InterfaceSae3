@@ -1,3 +1,7 @@
+using System.Drawing;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
 namespace Interface
 {
     public partial class FormAide : Form
@@ -5,6 +9,7 @@ namespace Interface
         public FormAide()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
 
