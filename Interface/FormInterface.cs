@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Reflection.Metadata.Ecma335;
 
@@ -100,7 +101,7 @@ namespace Interface
 
         public string ConvertCIDRToMask(int cidr)
         {
-            if (cidr < 8 || cidr > 31)
+            if (cidr > 31)
             {
                 return "";
             }
@@ -130,8 +131,8 @@ namespace Interface
                 masque_convert += Convert.ToString(Convert.ToInt32(masque[i]), 2).PadLeft(8, '0');
             }
 
-            int cidr = 0;
-            for (int i = 0; i < masque_convert.Length; i++)
+            int cidr = 1;
+            for (int i = 0; i < masque_convert.Length-1; i++)
             {
                 if (masque_convert[i] == '1')
                 {
@@ -156,10 +157,6 @@ namespace Interface
             }
 
         }
-
-
-
-
         private void txtCIDR_Leave(object sender, EventArgs e)
         {
             if (txtCIDR.Text != "")
@@ -221,7 +218,7 @@ namespace Interface
             }
             else
             {
-                if (Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255)
+                if ((Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255) ||( txtDec1.Text == "255" && txtDec2.Text == "255" && txtDec3.Text == "255" && txtDec4.Text == "255"))
                 {
                     txtDec1.BackColor = Color.LightSalmon;
                     txtDec2.BackColor = Color.LightSalmon;
@@ -243,6 +240,8 @@ namespace Interface
                     }
                     else
                     {
+                        lblRFC.Font = new Font("Segoe UI", 9);
+                        lblRFC.Text = "";
                         if (Convert.ToInt32(txtDec1.Text) < 128)
                         {
                             txtClasse.Text = "A";
@@ -268,14 +267,15 @@ namespace Interface
                                     }
                                     else
                                     {
-                                        txtClasse.Text = "E";
-                                        lblRFC.Text = "Adresse non utilisable (Reserved for Future Use)";
+                                        if (Convert.ToInt32(txtDec1.Text) < 256)
+                                        {
+                                            txtClasse.Text = "E";
+                                            lblRFC.Text = "Adresse non utilisable (Reserved for Future Use)";
+                                        }
                                     }
                                 }
                             }
                         }
-                        lblRFC.Font = new Font("Segoe UI", 9);
-                        lblRFC.Text = "";
                         if (txtDec1.Text == "0")
                         {
                             lblRFC.Text = "Adresse non utilisable (\"This\" Network)";
@@ -355,15 +355,23 @@ namespace Interface
                         ipBroad[2] = Convert.ToByte(ipNet[2] | (byte)~masque[2]);
                         ipBroad[3] = Convert.ToByte(ipNet[3] | (byte)~masque[3]);
 
-                        firstIp[0] = Convert.ToByte(ip[0]);
-                        firstIp[1] = Convert.ToByte(ip[1]);
-                        firstIp[2] = Convert.ToByte(ip[2]);
-                        firstIp[3] = Convert.ToByte(ip[3] + Convert.ToByte(1));
+                        if (txtCIDR.Text == "31")
+                        {
+                            firstIp[3] = Convert.ToByte(ipNet[3]);
+                            lastIp[3] = Convert.ToByte(ipBroad[3]);
+                        }
+                        else
+                        {
+                            firstIp[3] = Convert.ToByte(ipNet[3] + Convert.ToByte(1));
+                            lastIp[3] = Convert.ToByte((ipBroad[3]) - Convert.ToByte(1));
+                        }
+                        firstIp[0] = Convert.ToByte(ipNet[0]);
+                        firstIp[1] = Convert.ToByte(ipNet[1]);
+                        firstIp[2] = Convert.ToByte(ipNet[2]);
 
-                        lastIp[0] = Convert.ToByte(ip[0] | (byte)~masque[0]);
-                        lastIp[1] = Convert.ToByte(ip[1] | (byte)~masque[1]);
-                        lastIp[2] = Convert.ToByte(ip[2] | (byte)~masque[2]);
-                        lastIp[3] = Convert.ToByte((ip[3] | (byte)~masque[3]) - Convert.ToByte(1));
+                        lastIp[0] = Convert.ToByte(ipBroad[0]);
+                        lastIp[1] = Convert.ToByte(ipBroad[1]);
+                        lastIp[2] = Convert.ToByte(ipBroad[2]);
 
                         txtNet1.Text = Convert.ToString(ipNet[0]);
                         txtNet2.Text = Convert.ToString(ipNet[1]);
