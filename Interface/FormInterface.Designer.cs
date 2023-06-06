@@ -218,7 +218,6 @@
             // 
             txtMasque4.BackColor = Color.LightSteelBlue;
             txtMasque4.BorderStyle = BorderStyle.FixedSingle;
-            txtMasque4.Enabled = false;
             txtMasque4.Location = new Point(483, 225);
             txtMasque4.MaxLength = 3;
             txtMasque4.Name = "txtMasque4";
@@ -226,12 +225,12 @@
             txtMasque4.TabIndex = 33;
             txtMasque4.TextAlign = HorizontalAlignment.Center;
             txtMasque4.KeyPress += txtDec_KeyPress;
+            txtMasque4.Leave += txtMasque_Leave;
             // 
             // txtMasque3
             // 
             txtMasque3.BackColor = Color.LightSteelBlue;
             txtMasque3.BorderStyle = BorderStyle.FixedSingle;
-            txtMasque3.Enabled = false;
             txtMasque3.Location = new Point(368, 225);
             txtMasque3.MaxLength = 3;
             txtMasque3.Name = "txtMasque3";
@@ -239,12 +238,12 @@
             txtMasque3.TabIndex = 32;
             txtMasque3.TextAlign = HorizontalAlignment.Center;
             txtMasque3.KeyPress += txtDec_KeyPress;
+            txtMasque3.Leave += txtMasque_Leave;
             // 
             // txtMasque2
             // 
             txtMasque2.BackColor = Color.LightSteelBlue;
             txtMasque2.BorderStyle = BorderStyle.FixedSingle;
-            txtMasque2.Enabled = false;
             txtMasque2.Location = new Point(256, 225);
             txtMasque2.MaxLength = 3;
             txtMasque2.Name = "txtMasque2";
@@ -252,12 +251,12 @@
             txtMasque2.TabIndex = 31;
             txtMasque2.TextAlign = HorizontalAlignment.Center;
             txtMasque2.KeyPress += txtDec_KeyPress;
+            txtMasque2.Leave += txtMasque_Leave;
             // 
             // txtMasque1
             // 
             txtMasque1.BackColor = Color.LightSteelBlue;
             txtMasque1.BorderStyle = BorderStyle.FixedSingle;
-            txtMasque1.Enabled = false;
             txtMasque1.Location = new Point(144, 224);
             txtMasque1.MaxLength = 3;
             txtMasque1.Name = "txtMasque1";
@@ -265,6 +264,7 @@
             txtMasque1.TabIndex = 30;
             txtMasque1.TextAlign = HorizontalAlignment.Center;
             txtMasque1.KeyPress += txtDec_KeyPress;
+            txtMasque1.Leave += txtMasque_Leave;
             // 
             // label10
             // 

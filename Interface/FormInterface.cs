@@ -1,3 +1,4 @@
+using System.Net;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Interface
@@ -26,6 +27,8 @@ namespace Interface
                 return;
             }
         }
+
+
 
         private void txtBin_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -95,11 +98,76 @@ namespace Interface
             }
         }
 
+        public string ConvertCIDRToMask(int cidr)
+        {
+            if (cidr < 0 || cidr > 31)
+            {
+                return "";
+            }
+
+            int bitsSet = (int)Math.Pow(2, cidr) - 1;
+            int masque = bitsSet << (32 - cidr);
+
+            byte[] maskBytes = BitConverter.GetBytes(masque);
+            Array.Reverse(maskBytes); // Inversion de l'ordre des octets pour obtenir le format correct
+
+            IPAddress ipAddress = new IPAddress(maskBytes);
+            return ipAddress.ToString();
+        }
+
+        public string[] SplitMasque(string masque)
+        {
+            string[] parties_masque = masque.Split('.');
+
+            return parties_masque;
+        }
+
+        public int ConvertMaskToCIDR(string[] maskParts)
+        {
+
+            //string maskBinary = string.Concat(maskParts.Select(part => Convert.ToString(byte.Parse(part), 2).PadLeft(8, '0')));
+            //int cidr = maskBinary.IndexOf('0');
+
+            return 0;
+        }
+
+        private void txtMasque_Leave(object sender, EventArgs e)
+        {
+            if (txtMasque1.Text != "" && txtMasque2.Text != "" && txtMasque3.Text != "" && txtMasque4.Text != "")
+            {
+                string[] masque = new string[4];
+                for (int i = 0; i < 4; i++)
+                {
+                    string name = "txtMasque" + Convert.ToString(i + 1);
+                    masque[i] = txtMasque1.Text;
+                }
+                int CIDR = ConvertMaskToCIDR(masque);
+                txtCIDR.Text = Convert.ToString(CIDR);
+            }
+
+        }
+
+
+
+
         private void txtCIDR_Leave(object sender, EventArgs e)
         {
             if (txtCIDR.Text != "")
             {
-                switch (Convert.ToInt32(txtCIDR.Text))
+                string masque = ConvertCIDRToMask(Convert.ToInt32(txtCIDR.Text));
+                if (masque != "")
+                {
+                    string[] masque_list = SplitMasque(masque);
+                    int compt = 1;
+                    foreach (string split in masque_list)
+                    {
+                        string name = "txtMasque" + Convert.ToString(compt);
+                        grpSaisie.Controls[name].Text = split;
+                        compt++;
+                    }
+                }
+
+                /*switch (Convert.ToInt32(txtCIDR.Text))
                 {
                     case 8: txtMasque1.Text = "255"; txtMasque2.Text = "0"; txtMasque3.Text = "0"; txtMasque4.Text = "0"; break;
                     case 9: txtMasque1.Text = "255"; txtMasque2.Text = "128"; txtMasque3.Text = "0"; txtMasque4.Text = "0"; break;
@@ -125,9 +193,10 @@ namespace Interface
                     case 29: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "248"; break;
                     case 30: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "252"; break;
                     case 31: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "254"; break;
-                }
+                }*/
             }
         }
+
         private void btnValider_Click(object sender, EventArgs e)
         {
             DialogResult quitDialog;
