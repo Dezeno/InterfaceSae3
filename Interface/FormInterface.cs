@@ -17,7 +17,7 @@ namespace Interface
         private void btnAide_Click(object sender, EventArgs e)
         {
             FormAide frmAide = new FormAide();
-            frmAide.Show(this);
+            frmAide.ShowDialog(this);
         }
         private void txtDec_KeyPress(object sender, KeyPressEventArgs e)
         {
