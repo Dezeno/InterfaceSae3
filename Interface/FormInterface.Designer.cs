@@ -111,11 +111,12 @@
             // 
             // btnAide
             // 
-            btnAide.BackColor = SystemColors.ButtonHighlight;
+            btnAide.BackColor = Color.LightSalmon;
+            btnAide.FlatStyle = FlatStyle.Flat;
             btnAide.Location = new Point(587, 12);
             btnAide.Name = "btnAide";
             btnAide.Size = new Size(27, 29);
-            btnAide.TabIndex = 0;
+            btnAide.TabIndex = 35;
             btnAide.Text = "?";
             btnAide.UseVisualStyleBackColor = false;
             btnAide.Click += btnAide_Click;
@@ -588,7 +589,7 @@
             btnValider.Location = new Point(256, 264);
             btnValider.Name = "btnValider";
             btnValider.Size = new Size(89, 29);
-            btnValider.TabIndex = 0;
+            btnValider.TabIndex = 34;
             btnValider.Text = "Valider";
             btnValider.UseVisualStyleBackColor = false;
             btnValider.Click += btnValider_Click;
@@ -647,6 +648,8 @@
             // 
             // txtNbMachines
             // 
+            txtNbMachines.BackColor = Color.PaleGoldenrod;
+            txtNbMachines.BorderStyle = BorderStyle.FixedSingle;
             txtNbMachines.Enabled = false;
             txtNbMachines.Location = new Point(461, 237);
             txtNbMachines.Name = "txtNbMachines";
@@ -665,6 +668,8 @@
             // 
             // txtNbIP
             // 
+            txtNbIP.BackColor = Color.PaleGoldenrod;
+            txtNbIP.BorderStyle = BorderStyle.FixedSingle;
             txtNbIP.Enabled = false;
             txtNbIP.Location = new Point(122, 235);
             txtNbIP.Name = "txtNbIP";
@@ -704,6 +709,8 @@
             // 
             // txtLIP1
             // 
+            txtLIP1.BackColor = Color.PaleGoldenrod;
+            txtLIP1.BorderStyle = BorderStyle.FixedSingle;
             txtLIP1.Enabled = false;
             txtLIP1.Location = new Point(122, 193);
             txtLIP1.Name = "txtLIP1";
@@ -713,6 +720,8 @@
             // 
             // txtLIP4
             // 
+            txtLIP4.BackColor = Color.PaleGoldenrod;
+            txtLIP4.BorderStyle = BorderStyle.FixedSingle;
             txtLIP4.Enabled = false;
             txtLIP4.Location = new Point(461, 194);
             txtLIP4.Name = "txtLIP4";
@@ -722,6 +731,8 @@
             // 
             // txtLIP2
             // 
+            txtLIP2.BackColor = Color.PaleGoldenrod;
+            txtLIP2.BorderStyle = BorderStyle.FixedSingle;
             txtLIP2.Enabled = false;
             txtLIP2.Location = new Point(234, 194);
             txtLIP2.Name = "txtLIP2";
@@ -731,6 +742,8 @@
             // 
             // txtLIP3
             // 
+            txtLIP3.BackColor = Color.PaleGoldenrod;
+            txtLIP3.BorderStyle = BorderStyle.FixedSingle;
             txtLIP3.Enabled = false;
             txtLIP3.Location = new Point(346, 194);
             txtLIP3.Name = "txtLIP3";
@@ -770,6 +783,8 @@
             // 
             // txtFIP1
             // 
+            txtFIP1.BackColor = Color.PaleGoldenrod;
+            txtFIP1.BorderStyle = BorderStyle.FixedSingle;
             txtFIP1.Enabled = false;
             txtFIP1.Location = new Point(122, 155);
             txtFIP1.Name = "txtFIP1";
@@ -779,6 +794,8 @@
             // 
             // txtFIP4
             // 
+            txtFIP4.BackColor = Color.PaleGoldenrod;
+            txtFIP4.BorderStyle = BorderStyle.FixedSingle;
             txtFIP4.Enabled = false;
             txtFIP4.Location = new Point(461, 156);
             txtFIP4.Name = "txtFIP4";
@@ -788,6 +805,8 @@
             // 
             // txtFIP2
             // 
+            txtFIP2.BackColor = Color.PaleGoldenrod;
+            txtFIP2.BorderStyle = BorderStyle.FixedSingle;
             txtFIP2.Enabled = false;
             txtFIP2.Location = new Point(234, 156);
             txtFIP2.Name = "txtFIP2";
@@ -797,6 +816,8 @@
             // 
             // txtFIP3
             // 
+            txtFIP3.BackColor = Color.PaleGoldenrod;
+            txtFIP3.BorderStyle = BorderStyle.FixedSingle;
             txtFIP3.Enabled = false;
             txtFIP3.Location = new Point(346, 156);
             txtFIP3.Name = "txtFIP3";
@@ -836,6 +857,8 @@
             // 
             // txtBroad1
             // 
+            txtBroad1.BackColor = Color.PaleGoldenrod;
+            txtBroad1.BorderStyle = BorderStyle.FixedSingle;
             txtBroad1.Enabled = false;
             txtBroad1.Location = new Point(122, 116);
             txtBroad1.Name = "txtBroad1";
@@ -845,6 +868,8 @@
             // 
             // txtBroad4
             // 
+            txtBroad4.BackColor = Color.PaleGoldenrod;
+            txtBroad4.BorderStyle = BorderStyle.FixedSingle;
             txtBroad4.Enabled = false;
             txtBroad4.Location = new Point(461, 117);
             txtBroad4.Name = "txtBroad4";
@@ -854,6 +879,8 @@
             // 
             // txtBroad2
             // 
+            txtBroad2.BackColor = Color.PaleGoldenrod;
+            txtBroad2.BorderStyle = BorderStyle.FixedSingle;
             txtBroad2.Enabled = false;
             txtBroad2.Location = new Point(234, 117);
             txtBroad2.Name = "txtBroad2";
@@ -863,6 +890,8 @@
             // 
             // txtBroad3
             // 
+            txtBroad3.BackColor = Color.PaleGoldenrod;
+            txtBroad3.BorderStyle = BorderStyle.FixedSingle;
             txtBroad3.Enabled = false;
             txtBroad3.Location = new Point(346, 117);
             txtBroad3.Name = "txtBroad3";
@@ -882,6 +911,8 @@
             // 
             // txtClasse
             // 
+            txtClasse.BackColor = Color.PaleGoldenrod;
+            txtClasse.BorderStyle = BorderStyle.FixedSingle;
             txtClasse.Enabled = false;
             txtClasse.Location = new Point(122, 36);
             txtClasse.Name = "txtClasse";
@@ -920,6 +951,8 @@
             // 
             // txtNet1
             // 
+            txtNet1.BackColor = Color.PaleGoldenrod;
+            txtNet1.BorderStyle = BorderStyle.FixedSingle;
             txtNet1.Enabled = false;
             txtNet1.Location = new Point(122, 74);
             txtNet1.Name = "txtNet1";
@@ -929,6 +962,8 @@
             // 
             // txtNet4
             // 
+            txtNet4.BackColor = Color.PaleGoldenrod;
+            txtNet4.BorderStyle = BorderStyle.FixedSingle;
             txtNet4.Enabled = false;
             txtNet4.Location = new Point(461, 75);
             txtNet4.Name = "txtNet4";
@@ -938,6 +973,8 @@
             // 
             // txtNet2
             // 
+            txtNet2.BackColor = Color.PaleGoldenrod;
+            txtNet2.BorderStyle = BorderStyle.FixedSingle;
             txtNet2.Enabled = false;
             txtNet2.Location = new Point(234, 75);
             txtNet2.Name = "txtNet2";
@@ -947,6 +984,8 @@
             // 
             // txtNet3
             // 
+            txtNet3.BackColor = Color.PaleGoldenrod;
+            txtNet3.BorderStyle = BorderStyle.FixedSingle;
             txtNet3.Enabled = false;
             txtNet3.Location = new Point(346, 75);
             txtNet3.Name = "txtNet3";
