@@ -31,16 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VLSM_FLSM));
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(1, 9);
+            label1.Location = new Point(1, 35);
             label1.Name = "label1";
-            label1.Size = new Size(539, 60);
+            label1.Size = new Size(463, 40);
             label1.TabIndex = 0;
-            label1.Text = "VLSM (Variable Length Subnet Masking) et FLSM (Fixed Length Subnet Masking) \r\nsont deux méthodes utilisées pour subdiviser et gérer les adresses IP \r\ndans un réseau.";
+            label1.Text = "sont deux méthodes utilisées pour subdiviser et gérer les adresses IP \r\ndans un réseau.";
             // 
             // label2
             // 
@@ -53,12 +54,24 @@
             label2.Text = resources.GetString("label2.Text");
             label2.Click += label2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.SteelBlue;
+            label3.Location = new Point(1, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(539, 20);
+            label3.TabIndex = 2;
+            label3.Text = "VLSM (Variable Length Subnet Masking) et FLSM (Fixed Length Subnet Masking) ";
+            label3.Click += label3_Click;
+            // 
             // VLSM_FLSM
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(539, 497);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -73,5 +86,6 @@
 
         private Label label1;
         private Label label2;
+        private Label label3;
     }
 }

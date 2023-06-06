@@ -130,7 +130,7 @@ et 2 réservées pour l'adresse réseau et l'adresse de diffusion.
 
 VLSM est une méthode plus flexible qui permet de diviser un réseau en 
 sous-réseaux de tailles variables.
- Avec VLSM, vous pouvez allouer des sous-réseaux de différentes tailles en 
+Avec VLSM, vous pouvez allouer des sous-réseaux de différentes tailles en 
 fonction des besoins spécifiques
 de chaque sous-réseau. Par exemple, vous pourriez avoir besoin d'un sous-réseau 
 avec seulement 10 hôtes et un autre avec 50 hôtes. 
