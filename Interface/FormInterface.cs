@@ -101,7 +101,7 @@ namespace Interface
 
         public string ConvertCIDRToMask(int cidr)
         {
-            if (cidr > 31 || cidr < 1)
+            if (cidr > 31 || cidr < 8)
             {
                 return "";
             }
@@ -230,7 +230,7 @@ namespace Interface
             }
             else
             {
-                if ((Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255) || (txtDec1.Text == "255" && txtDec2.Text == "255" && txtDec3.Text == "255" && txtDec4.Text == "255"))
+                if ((Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255))
                 {
                     txtDec1.BackColor = Color.LightSalmon;
                     txtDec2.BackColor = Color.LightSalmon;
@@ -244,7 +244,7 @@ namespace Interface
                 }
                 else
                 {
-                    if (Convert.ToInt32(txtCIDR.Text) > 31 || Convert.ToInt32(txtCIDR.Text) < 1)
+                    if (Convert.ToInt32(txtCIDR.Text) > 31 || Convert.ToInt32(txtCIDR.Text) < 8)
                     {
                         txtCIDR.BackColor = Color.LightSalmon;
                         txtMasque1.BackColor = Color.LightSalmon;
