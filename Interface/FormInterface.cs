@@ -122,13 +122,23 @@ namespace Interface
             return parties_masque;
         }
 
-        public int ConvertMaskToCIDR(string[] maskParts)
+        public int ConvertMaskToCIDR(string[] masque)
         {
+            string masque_convert = "";
+            for (int i = 0; i < masque.Length; i++)
+            {
+                masque_convert += Convert.ToString(Convert.ToInt32(masque[i]), 2).PadLeft(8, '0');
+            }
 
-            //string maskBinary = string.Concat(maskParts.Select(part => Convert.ToString(byte.Parse(part), 2).PadLeft(8, '0')));
-            //int cidr = maskBinary.IndexOf('0');
-
-            return 0;
+            int cidr = 0;
+            for (int i = 0; i < masque_convert.Length; i++)
+            {
+                if (masque_convert[i] == '1')
+                {
+                    cidr++;
+                }
+            }
+            return cidr;
         }
 
         private void txtMasque_Leave(object sender, EventArgs e)
@@ -139,7 +149,7 @@ namespace Interface
                 for (int i = 0; i < 4; i++)
                 {
                     string name = "txtMasque" + Convert.ToString(i + 1);
-                    masque[i] = txtMasque1.Text;
+                    masque[i] = grpSaisie.Controls[name].Text;
                 }
                 int CIDR = ConvertMaskToCIDR(masque);
                 txtCIDR.Text = Convert.ToString(CIDR);
