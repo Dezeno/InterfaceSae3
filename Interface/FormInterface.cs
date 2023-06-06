@@ -101,7 +101,7 @@ namespace Interface
 
         public string ConvertCIDRToMask(int cidr)
         {
-            if (cidr > 31)
+            if (cidr > 31 || cidr < 8)
             {
                 return "";
             }
@@ -131,12 +131,24 @@ namespace Interface
                 masque_convert += Convert.ToString(Convert.ToInt32(masque[i]), 2).PadLeft(8, '0');
             }
 
-            int cidr = 1;
-            for (int i = 0; i < masque_convert.Length-1; i++)
+            int cidr = 0;
+
+            bool zeroFound = false;
+            for (int i = 0; i < masque_convert.Length - 1; i++)
             {
                 if (masque_convert[i] == '1')
                 {
                     cidr++;
+                }
+                else if (masque_convert[i] == '0')
+                {
+                    zeroFound = true;
+                    if (masque_convert.Substring(i + 1).Contains('1'))
+                    {
+                        // CIDR invalide, il y a des bits "1" après le premier bit "0"
+                        cidr = 0;
+                    }
+                    break;
                 }
             }
             return cidr;
@@ -232,7 +244,7 @@ namespace Interface
                 }
                 else
                 {
-                    if (Convert.ToInt32(txtCIDR.Text) > 31)
+                    if (Convert.ToInt32(txtCIDR.Text) > 31 || Convert.ToInt32(txtCIDR.Text) < 8)
                     {
                         txtCIDR.BackColor = Color.LightSalmon;
                         quitDialog = MessageBox.Show("Le masque est incorrect !", "Attention !", MessageBoxButtons.OK);
