@@ -100,7 +100,7 @@ namespace Interface
 
         public string ConvertCIDRToMask(int cidr)
         {
-            if (cidr < 0 || cidr > 31)
+            if (cidr < 8 || cidr > 31)
             {
                 return "";
             }
@@ -166,6 +166,10 @@ namespace Interface
                         compt++;
                     }
                 }
+                else
+                {
+                    txtMasque1.Text = ""; txtMasque2.Text = ""; txtMasque3.Text = ""; txtMasque4.Text = "";
+                }
 
                 /*switch (Convert.ToInt32(txtCIDR.Text))
                 {
@@ -193,6 +197,7 @@ namespace Interface
                     case 29: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "248"; break;
                     case 30: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "252"; break;
                     case 31: txtMasque1.Text = "255"; txtMasque2.Text = "255"; txtMasque3.Text = "255"; txtMasque4.Text = "254"; break;
+                    default: txtMasque1.Text = ""; txtMasque2.Text = ""; txtMasque3.Text = ""; txtMasque4.Text = ""; break;
                 }*/
             }
         }
