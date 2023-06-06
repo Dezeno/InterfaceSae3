@@ -230,7 +230,7 @@ namespace Interface
             }
             else
             {
-                if ((Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255) ||( txtDec1.Text == "255" && txtDec2.Text == "255" && txtDec3.Text == "255" && txtDec4.Text == "255"))
+                if ((Convert.ToInt32(txtDec1.Text) > 255 || Convert.ToInt32(txtDec2.Text) > 255 || Convert.ToInt32(txtDec3.Text) > 255 || Convert.ToInt32(txtDec4.Text) > 255) || (txtDec1.Text == "255" && txtDec2.Text == "255" && txtDec3.Text == "255" && txtDec4.Text == "255"))
                 {
                     txtDec1.BackColor = Color.LightSalmon;
                     txtDec2.BackColor = Color.LightSalmon;

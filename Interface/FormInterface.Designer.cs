@@ -997,6 +997,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(626, 764);
             Controls.Add(grpCalcul);
@@ -1004,6 +1005,8 @@
             Controls.Add(lblNoms);
             Controls.Add(picIUT);
             Controls.Add(btnAide);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormInterface";
             Text = "IP App";
             Load += FormInterface_Load;
