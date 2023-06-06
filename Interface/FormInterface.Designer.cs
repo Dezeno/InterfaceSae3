@@ -104,6 +104,7 @@
             txtNet4 = new TextBox();
             txtNet2 = new TextBox();
             txtNet3 = new TextBox();
+            btnEffacer = new Button();
             ((System.ComponentModel.ISupportInitialize)picIUT).BeginInit();
             grpSaisie.SuspendLayout();
             grpCalcul.SuspendLayout();
@@ -142,6 +143,7 @@
             // grpSaisie
             // 
             grpSaisie.BackColor = SystemColors.ScrollBar;
+            grpSaisie.Controls.Add(btnEffacer);
             grpSaisie.Controls.Add(lblPt12);
             grpSaisie.Controls.Add(lblPt11);
             grpSaisie.Controls.Add(lblPt10);
@@ -993,6 +995,18 @@
             txtNet3.TabIndex = 39;
             txtNet3.TextAlign = HorizontalAlignment.Center;
             // 
+            // btnEffacer
+            // 
+            btnEffacer.BackColor = Color.IndianRed;
+            btnEffacer.FlatStyle = FlatStyle.Flat;
+            btnEffacer.Location = new Point(485, 264);
+            btnEffacer.Name = "btnEffacer";
+            btnEffacer.Size = new Size(89, 29);
+            btnEffacer.TabIndex = 37;
+            btnEffacer.Text = "Effacer";
+            btnEffacer.UseVisualStyleBackColor = false;
+            btnEffacer.Click += btnEffacer_Click;
+            // 
             // FormInterface
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1096,5 +1110,6 @@
         private TextBox txtNet2;
         private TextBox txtNet3;
         private Label lblRFC;
+        private Button btnEffacer;
     }
 }

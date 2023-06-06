@@ -417,5 +417,62 @@ namespace Interface
                 }
             }
         }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Voulez vous vraiment effacer ?", "Effacer", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                txtDec1.Text = "";
+                txtDec2.Text = "";
+                txtDec3.Text = "";
+                txtDec4.Text = "";
+
+                txtHexa1.Text = "";
+                txtHexa2.Text = "";
+                txtHexa3.Text = "";
+                txtHexa4.Text = "";
+
+                txtBin1.Text = "";
+                txtBin2.Text = "";
+                txtBin3.Text = "";
+                txtBin4.Text = "";
+
+                txtCIDR.Text = "";
+
+                txtClasse.Text = "";
+
+                txtMasque1.Text = "";
+                txtMasque2.Text = "";
+                txtMasque3.Text = "";
+                txtMasque4.Text = "";
+
+                txtNet1.Text = "";
+                txtNet2.Text = "";
+                txtNet3.Text = "";
+                txtNet4.Text = "";
+
+                txtBroad1.Text = "";
+                txtBroad2.Text = "";
+                txtBroad3.Text = "";
+                txtBroad4.Text = "";
+
+                txtFIP1.Text = "";
+                txtFIP2.Text = "";
+                txtFIP3.Text = "";
+                txtFIP4.Text = "";
+
+                txtLIP1.Text = "";
+                txtLIP2.Text = "";
+                txtLIP3.Text = "";
+                txtLIP4.Text = "";
+
+                txtNbIP.Text = "";
+                txtNbMachines.Text = "";
+
+                lblRFC.Text = "";
+            }
+
+        }
     }
 }
